@@ -595,11 +595,11 @@ jenkins:
           name: onepassword-sa-token
           key: token
 
-    # 1Password CLI Service Account Token (required by 1Password CLI)
-    - name: OP_SERVICE_ACCOUNT_TOKEN
+    # Opensearch 1Password Service Account Token (ESO-managed from 1Password)
+    - name: OPENSEARCH_ONEPASSWORD_SA_TOKEN
       valueFrom:
         secretKeyRef:
-          name: onepassword-sa-token
+          name: opensearch-1password-sa-token
           key: token
 
     # EC2 SSH Private Key (ESO-managed from 1Password)
